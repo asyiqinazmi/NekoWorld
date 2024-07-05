@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anime Search App</title>
+    <link rel="stylesheet" href="photon.min.css" />
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <p class="logo">NEKOWORLD</p>
+          <div class="search-container">
+            <input type="text" id="anime_name" placeholder="Enter Title">
+            <button onclick="searchAnime()">Search</button>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="wishlist.html">Watchlist</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2 id="trending-title" class="trending-title" style="display: none;">Trending</h2>
+      <div id="results" class="results-container"></div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">NEKOWORLD</div>
+        <div class="footer-nav">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 NekoWorld. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

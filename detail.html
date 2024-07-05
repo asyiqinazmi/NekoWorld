@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Anime Detail</title>
+  <link rel="stylesheet" href="photon.min.css" />
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 100px; /* Adjust to accommodate fixed header */
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #1d1d1d;
+      padding: 2px 10px; /* Adjust padding for spacing */
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Impact', sans-serif;
+      font-size: 30px;
+      letter-spacing: 1px;
+      color: #69a2df;
+      font-weight: bold;
+      margin-left: 10px;
+      margin-right: 20px; /* Adjust the space between the logo and search box */
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      margin-right: 50px;
+      text-decoration: none;
+      color: #69a2df;
+      font-size: 20px;
+    }
+
+    footer {
+      margin-top: 10%; /* Add margin-top to create space before the footer */
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding-top: 50px;
+      padding: 20px 40px;
+      border-top: 2px solid #69a2df;
+      color: #ccc;
+    }
+
+    .footer-logo {
+      font-family: 'Impact', sans-serif;
+      font-size: 30px;
+      letter-spacing: 1px;
+      color: #69a2df;
+      font-weight: bold;
+    }
+
+    .footer-nav a {
+      color: #69a2df;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: #fff;
+    }
+
+    .footer-social a {
+      color: #69a2df;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #1d1d1d;
+      border-top: 1px solid #333;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      color: #69a2df;
+      font-size: 14px;
+    }
+    /* Main Content Styles */
+/* Main Content Styles */
+main {
+  padding: 20px;
+  padding-left: 300px; 
+  padding-right: 300px;/* add some padding to the left of the content area */
+  min-height: calc(100vh - 160px); /* Adjust for footer and header */
+  display: flex;
+  flex-direction: column;
+}
+
+#anime_title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #69a2df;
+  margin-bottom: 10px;
+  text-align: center; /* Center the text */
+}
+
+#anime_image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  align-self: center; /* Center the image */
+}
+
+
+.anime-info {
+  margin-bottom: 20px;
+  margin-left: 20px; 
+  font-size: 17pt;
+}
+
+.anime-info p {
+  font-size: 30pt;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+p{
+  font-size: 15pt;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.anime-info strong {
+  color: #69a2df;
+}
+
+button {
+  padding: 8px 16px; /* Adjust padding to make the button smaller */
+  background-color: #457ebb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  /* margin-top: 10px; */
+  width: auto;
+  display: inline-block; /* Add this to make the buttons inline */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.button-container {
+  display: flex; /* Add this to align the buttons in one row */
+  justify-content: space-between; /* Add this to space the buttons evenly */
+  margin-bottom: 20px; /* Add some margin bottom to separate from the link */
+}
+
+ #add_to_wishlist {
+  font-size: 14px; /* reduce the font size */
+  /* padding: 4px 4px; reduce the padding */
+  width: 150px; /* adjust the width to your liking */
+  margin-left: 0; /* remove the default margin */
+  text-align: center; /* align the text to the left */
+}
+
+
+#anime_link {
+  display: block;
+  margin-top: 20px;
+  color: #69a2df;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#anime_link:hover {
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <p class="logo">NEKOWORLD</p>
+        <div class="search-container">
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wishlist.html">Watchlist</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 id="anime_title"></h1>
+    <img id="anime_image" alt="Anime Image">
+    <p id="anime_synopsis"></p>
+    <p id="anime_score"></p>
+    <p id="anime_rank"></p>
+    <p id="anime_popularity"></p>
+    <p id="anime_episodes"></p>
+    <p id="anime_type"></p>
+    <p id="anime_genres"></p>
+    <p id="anime_producers"></p>
+    <p id="anime_source"></p>
+    <p id="anime_rating"></p>
+    <p id="anime_release"></p>
+    <p id="anime_schedule"></p><br>
+    <div class="button-container">
+      <button id="add_to_wishlist">Add to Watchlist</button>
+    </div>
+    <a id="anime_link" href="#" target="_blank">View on MyAnimeList</a>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">NEKOWORLD</div>
+      <div class="footer-nav">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 NekoWorld. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="detail.js"></script>
+</body>
+</html>

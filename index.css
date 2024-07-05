@@ -1,0 +1,225 @@
+#anime_name {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #457ebb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 42px; /* Match the height of the input box */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add this CSS to your index.css file */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Impact', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #69a2df;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 20px; /* Adjust the space between the logo and search box */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 10px;
+  font-size: 13px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  height: 32px; /* Match the height of the button */
+}
+
+.search-container button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 13px;
+  border: none;
+  background-color: #306eb1;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 32px; /* Match the height of the input box */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  margin-right: 50px;
+  text-decoration: none;
+  color: #69a2df;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 10%; /* Add margin-top to create space before the footer */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding-top: 50px;
+  padding: 20px 40px;
+  border-top: 2px solid #69a2df;
+  color: #ccc;
+}
+
+.footer-logo {
+  font-family: 'Impact', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #69a2df;
+  font-weight: bold;
+}
+
+.footer-nav a {
+  color: #69a2df;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  color: #69a2df;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #1d1d1d;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #69a2df;
+  font-size: 14px;
+}
+
+.trending-title {
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add some margin to the top */
+  font-size: 26pt; /* Adjust the font size if needed */
+  font-weight: bold; /* Make it bold for emphasis */
+}
+
+.remove-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+  gap: 20px; /* Spacing between items */
+  justify-content: flex-start; /* Align items starting from the left */
+  margin-top: 20px;
+  margin-bottom: 40px;
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  width: 100%;
+}
+
+.anime-container {
+  width: calc(25% - 20px); /* Calculate width for 4 items per row with gap */
+  margin-bottom: 20px; /* Space between rows */
+  text-align: center; /* Center content horizontally */
+  text-decoration: none; /* Remove default link decoration */
+  color: #333; /* Text color */
+}
+
+.anime-container img {
+  max-width: 100%; /* Ensure images do not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.anime-title {
+  margin-top: 10px; /* Space between title and image */
+  font-weight: bold; /* Bold text for title */
+  color: #fff;
+  font-size: 14pt;
+}
+
+.anime-rank {
+  margin-top: 10px; /* Space between title and image */
+  font-weight: bold; /* Bold text for title */
+  color: #69a2df;
+  font-size: 17pt;
+}
+
+.anime-container p {
+  margin: 10px 0;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 100px; /* Adjust to accommodate fixed header */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1d1d1d;
+  padding: 2px 10px; /* Adjust padding for spacing */
+}
